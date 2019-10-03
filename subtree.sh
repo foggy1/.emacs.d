@@ -7,10 +7,13 @@
 ### REMOTE = either fully qualified clone link or named remote
 CMD=$1
 PROJ=$2
-REMOTE=$3
+### Since in latter cases, the remote will be named after the proj,
+### allow for simply writing CMD PROJ
+REMOTE={$3-$PROJ}
+### NOTE: we may NOT avail ourselves of the CMD PROJ only pattern
+### if we want to have a non-default tag at $4.
+### I don't plan on that happening any time soon so I don't care about the edge case.
 TAG=${4-"master"}
-
-echo $TAG
 
 git remote add -f $PROJ $REMOTE || true
 if [ $CMD = "pull" ]
