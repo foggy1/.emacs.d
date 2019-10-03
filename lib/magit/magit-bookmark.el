@@ -1,0 +1,1 @@
+lisp/magit-bookmark.el

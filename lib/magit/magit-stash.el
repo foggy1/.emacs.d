@@ -1,0 +1,1 @@
+lisp/magit-stash.el
