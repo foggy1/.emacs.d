@@ -110,6 +110,9 @@
 (ido-ubiquitous-mode 1)
 ;; end for ido-completing-read+
 
+
+(require 'js2-mode)
+(require 'rjsx-mode)
 (require 'libgit) ;; for magit
 (require 'yasnippet) ;; for lsp-mode with snippets on
 (use-package lsp-mode
