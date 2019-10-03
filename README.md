@@ -32,3 +32,6 @@ Note also that the second arg and the name of the package's repository need not 
 
 ## Updating existing trees
 Use `subtree.sh` script like so: `./subtree.sh pull package-name`. This short version assumes you've already added locally as it relies on an existing remote named `package-name` that knows the repo already. If this isn't the case, you can simply do `./subtree.sh pull package-name $(cat lib/package-name/.remote)` since any added file automatically includes a `.remote`. This will also _add_ a named remote for you since it wasn't there yet and allow the shorter version.
+
+## Improvments
+* Other than just taking advantage of the autoload file like I'm probably supposed to, the biggest thing is to get the autoload script to not just search the root directory of any `lib` folder but also the `lisp` folder in each directory. This would save on the symlinking of `magit` and `transient` (the former of which is particularly nasty).
