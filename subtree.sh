@@ -13,7 +13,7 @@ REMOTE=${3:-$PROJ}
 ### NOTE: we may NOT avail ourselves of the CMD PROJ only pattern
 ### if we want to have a non-default tag at $4.
 ### I don't plan on that happening any time soon so I don't care about the edge case.
-TAG=${4-"master"}
+TAG=${4:-"master"}
 
 git remote add -f $PROJ $REMOTE || true
 if [ $CMD = "pull" ]
