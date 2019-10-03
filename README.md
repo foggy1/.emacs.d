@@ -24,9 +24,11 @@ And, maybe, just maybe, I'll actually have some idea of how my Emacs actually wo
 
 
 ## Adding more trees
+**Always use `subtree.sh` to add subtrees**. It adds remotes for you and saves a `.remote` file in the package's directory for future convenience.
+
 Use the `subtree.sh` script like so: `./subtree.sh add package-name git@github.com:foggy1/package-name`. It optionally takes a fourth arg if you want to link it to something other than `master`. The second arg will be the name of your lib: this _must_ match the primary `*.el` provider name of the package  or the autoload script that comes with this project will not load the package correctly.
 
 Note also that the second arg and the name of the package's repository need not match. In some cases -- such as `better-defaults` -- they will. In others, such as `ido-completing-read+` having a repo named `ido-completing-read-plus`, will not match for obvious reasons. Another common pattern is that repos will end in `.el` which will always need to be thrown out.
 
 ## Updating existing trees
-Use `subtree.sh` script like so: `./subtree.sh pull package-name`. This short version assumes you've already added locally as it relies on an existing remote named `packagee-name` that knows the repo already. If this isn't the case, you can simply do `./subtree.sh pull package-name $(cat lib/package-name/.remote)` since any added file automatically includes a `.remote`. This will also _add_ a named remote for you since it wasn't there yet and allow the shorter version.
+Use `subtree.sh` script like so: `./subtree.sh pull package-name`. This short version assumes you've already added locally as it relies on an existing remote named `package-name` that knows the repo already. If this isn't the case, you can simply do `./subtree.sh pull package-name $(cat lib/package-name/.remote)` since any added file automatically includes a `.remote`. This will also _add_ a named remote for you since it wasn't there yet and allow the shorter version.
