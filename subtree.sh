@@ -9,10 +9,12 @@ CMD=$1
 PROJ=$2
 REMOTE=$3
 
-### Run the stuff! ALWAYS squash
-git subtree $CMD --prefix=lib/$PROJ $REMOTE master --squash
+git remote add -f $PROJ $REMOTE || true
 
-if [ $CMD = add ]
+### Run the stuff! ALWAYS squash
+git subtree $CMD --prefix=lib/$PROJ $PROJ master --squash
+
+if [ $CMD = "add" ]
 then
-    echo $REMOTE lib/$PROJ/.remote
+    echo $REMOTE >> lib/$PROJ/.remote
 fi
