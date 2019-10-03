@@ -1,0 +1,8 @@
+backups/
+ido.last*
+projectile-bookmarks.eld
+smex-items
+transient/
+.lsp-session*
+auto-save-list/
+.emacs.desktop*
