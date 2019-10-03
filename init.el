@@ -82,6 +82,11 @@
 
 (require 'dash) ;; for magit
 (require 'dash-functional) ;; for lsp-ui
+(require 'dockerfile-mode)
+;; For dockerfile-mode
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+;; end for dockerfile-mode
+
 (require 'elixir-mode)
 (require 'epl) ;; for pkg-info
 (require 'exec-path-from-shell)
