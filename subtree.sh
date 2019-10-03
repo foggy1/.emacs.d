@@ -10,4 +10,9 @@ PROJ=$2
 REMOTE=$3
 
 ### Run the stuff! ALWAYS squash
-git subtree $CMD --prefix=lib/$PROJ $REMOTE --squash
+git subtree $CMD --prefix=lib/$PROJ $REMOTE master --squash
+
+if [ $CMD = add ]
+then
+    echo $REMOTE lib/$PROJ/.remote
+fi
