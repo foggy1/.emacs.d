@@ -167,6 +167,7 @@
 (global-set-key (kbd "C-x o") 'switch-window)
 ;; end for switch-window
 
+(require 'terraform-mode)
 (require 'transient) ;; for magit
 (require 'with-editor) ;; for magit
 
