@@ -110,6 +110,7 @@
 (setq flycheck-elixir-credo-strict t)
 ;; end for flycheck-credo
 
+(require 'groovy-mode)
 ;; Frankly we could just require this
 ;; I'm not sure we need the other benefits of terraform mode
 (require 'hcl-mode) ;; for terraform-mode
