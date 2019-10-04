@@ -109,6 +109,10 @@
 (add-hook 'elixir-mode-hook 'flycheck-mode)
 (setq flycheck-elixir-credo-strict t)
 ;; end for flycheck-credo
+
+;; Frankly we could just require this
+;; I'm not sure we need the other benefits of terraform mode
+(require 'hcl-mode) ;; for terraform-mode
 (require 'ht) ;; for lsp-mode
 (require 'ido-completing-read+)
 ;; For ido-completing-read+
