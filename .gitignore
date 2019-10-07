@@ -6,3 +6,4 @@ transient/
 .lsp-session*
 auto-save-list/
 .emacs.desktop*
+.uptimes.el
