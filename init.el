@@ -4,7 +4,7 @@
 
 ;; Author: Austin Lanari
 ;; Maintainer: Austin Lanari <austin@jumanji.io>
-;; Version: 0.0.1
+;; Version: 1.0.0
 ;; Package-Requires: ((emacs "26.1"))
 
 ;;; Commentary:
@@ -14,9 +14,6 @@
 ;; Only big frustration so far is linting unusued vars in Elixir.
 ;; I really only need on-the-fly linting support.
 ;; I want to try magit so it's there with the necessary libs.
-
-
-
 
 ;;; Code:
 
@@ -28,6 +25,10 @@
 ;; Turn ido-mode on and make it aggressive for ubiquitous ido
 (ido-mode 1)
 (ido-everywhere 1)
+
+;; Let's set a default theme!
+;; I use this one the most, it's nice.
+(load-theme 'misterioso t)
 
 ;; turn off the big yellow alarm when I'm doing bad stuff
 (setq ring-bell-function 'ignore)
