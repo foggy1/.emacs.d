@@ -30,6 +30,9 @@
 ;; I use this one the most, it's nice.
 (load-theme 'misterioso t)
 
+;; Remove trailing whitespace while saving
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; turn off the big yellow alarm when I'm doing bad stuff
 (setq ring-bell-function 'ignore)
 
