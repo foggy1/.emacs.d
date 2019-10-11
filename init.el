@@ -39,6 +39,12 @@
 ;; Allow C-v and M-v to reach top or bottom of buffer
 (setq scroll-error-top-bottom t)
 
+;; Update magit status buffer on save
+(add-hook 'after-save-hook 'magit-after-save-refresh-status t)
+
+;; Refresh dired buffer when file changes occur
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
 ;; Let's save the desktop all the time, fuck it; do it live
 (desktop-save-mode 1)
 
