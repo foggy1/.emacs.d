@@ -45,6 +45,9 @@
 ;; Refresh dired buffer when file changes occur
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
+;; No tabs oh my goodness why
+(setq-default indent-tabs-mode nil)
+
 ;; Let's save the desktop all the time, fuck it; do it live
 (desktop-save-mode 1)
 
