@@ -48,6 +48,9 @@
 ;; No tabs oh my goodness why
 (setq-default indent-tabs-mode nil)
 
+;; Only two tabs for indent in js-mode ugghhhh come on;
+(setq js-indent-level 2)
+
 ;; Let's save the desktop all the time, fuck it; do it live
 (desktop-save-mode 1)
 
