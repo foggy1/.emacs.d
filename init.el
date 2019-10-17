@@ -39,12 +39,6 @@
 ;; Allow C-v and M-v to reach top or bottom of buffer
 (setq scroll-error-top-bottom t)
 
-;; Update magit status buffer on save
-(add-hook 'after-save-hook 'magit-after-save-refresh-status t)
-
-;; Refresh dired buffer when file changes occur
-(add-hook 'dired-mode-hook 'auto-revert-mode)
-
 ;; No tabs oh my goodness why
 (setq-default indent-tabs-mode nil)
 
@@ -179,6 +173,12 @@
 ;; end for projectile
 
 (require 's) ;; for lsp-ui
+(require 'smartparens)
+(require 'smartparens-config)
+;; For smartparens
+;; Turn on smartparens-mode globally by default
+(smartparens-global-mode 1)
+;; end for smartparens
 (require 'smex)
 (require 'spinner) ;; for lsp-mode
 (require 'switch-window)
