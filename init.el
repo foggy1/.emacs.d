@@ -191,6 +191,7 @@
 (require 'terraform-mode)
 (require 'transient) ;; for magit
 (require 'with-editor) ;; for magit
+(require 'yaml-mode)
 
 
 (provide 'init)
