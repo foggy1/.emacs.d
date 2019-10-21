@@ -164,6 +164,14 @@
 ;; end for magit
 
 (require 'markdown-mode) ;; for lsp-mode and lsp-ui
+(require 'move-dup)
+;; For move-dup
+;; Here we set keybindings so we don't have to enable the minor-mode
+(global-set-key (kbd "M-<up>") 'md-move-lines-up)
+(global-set-key (kbd "M-<down>") 'md-move-lines-down)
+(global-set-key (kbd "C-M-<up>") 'md-duplicate-up)
+(global-set-key (kbd "C-M-<down>") 'md-duplicate-down)
+;; end for move-dup
 (require 'pkg-info) ;; for elixir-mode
 (require 'projectile)
 ;; For projectile
