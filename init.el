@@ -120,6 +120,12 @@
 (setq flycheck-elixir-credo-strict t)
 ;; end for flycheck-credo
 
+(require 'flycheck-rust)
+;; For flycheck-rust
+(with-eval-after-load 'rust-mode
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+;; end for flycheck-rust
+
 (require 'groovy-mode)
 ;; Frankly we could just require this
 ;; I'm not sure we need the other benefits of terraform mode
@@ -179,7 +185,11 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 ;; end for projectile
-
+(require 'rust-mode)
+;; For rust-mode
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+;; end for rust-mode
 (require 's) ;; for lsp-ui
 (require 'smartparens)
 (require 'smartparens-config)
