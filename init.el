@@ -144,12 +144,12 @@
 (require 'libgit) ;; for magit
 (require 'mmm-mode) ;; for vue-mode
 (require 'yasnippet) ;; for lsp-mode with snippets on
-(use-package lsp-mode
-  :commands lsp
-  :diminish lsp-mode
-  :hook
-  (elixir-mode . lsp)
-  :init)
+;; (use-package lsp-mode
+;;   :commands lsp
+;;   :diminish lsp-mode
+;;   :hook
+;;   (elixir-mode . lsp)
+;;   :init)
 
 ;; Stop asking me root, damnit
 (setq lsp-auto-guess-root t)
