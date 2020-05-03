@@ -97,6 +97,7 @@
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 ;; end for dockerfile-mode
 
+(require 'edit-indirect) ;; for vue-mode
 (require 'elixir-mode)
 (require 'epl) ;; for pkg-info
 (require 'exec-path-from-shell)
