@@ -138,6 +138,7 @@
 
 
 (require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . js2-mode))
 (require 'rjsx-mode)
 (require 'libgit) ;; for magit
 (require 'yasnippet) ;; for lsp-mode with snippets on
@@ -208,6 +209,7 @@
 
 (require 'terraform-mode)
 (require 'transient) ;; for magit
+(require 'web-mode)
 (require 'with-editor) ;; for magit
 (require 'yaml-mode)
 
