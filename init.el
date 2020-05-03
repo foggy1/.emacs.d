@@ -141,6 +141,7 @@
 ;; (add-to-list 'auto-mode-alist '("\\.vue\\'" . js2-mode))
 (require 'rjsx-mode)
 (require 'libgit) ;; for magit
+(require 'mmm-mode) ;; for vue-mode
 (require 'yasnippet) ;; for lsp-mode with snippets on
 (use-package lsp-mode
   :commands lsp
