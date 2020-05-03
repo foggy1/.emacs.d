@@ -193,6 +193,7 @@
           (lambda () (setq indent-tabs-mode nil)))
 ;; end for rust-mode
 (require 's) ;; for lsp-ui
+(require 'ssass-mode) ;; for vue-mode
 (require 'smartparens)
 (require 'smartparens-config)
 ;; For smartparens
