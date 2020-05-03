@@ -211,6 +211,7 @@
 (require 'terraform-mode)
 (require 'transient) ;; for magit
 (require 'vue-mode)
+(require 'vue-html-mode) ;; for view-mode
 (require 'web-mode)
 (require 'with-editor) ;; for magit
 (require 'yaml-mode)
