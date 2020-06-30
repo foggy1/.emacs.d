@@ -54,6 +54,13 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; to autoload xsd as xml and keep behavior consistent with xml
+(setq auto-mode-alist (cons '("\\.xml$" . nxml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.xsd$" . nxml-mode) auto-mode-alist))
+
+(autoload 'xml-mode "nxml" "XML editing mode" t)
+
+
 ;; function that does the loading of libs
 ;; not sure how the autoload bit works yet, other than knowing my-autoload.el exists that bit does nothing
 (defun pnh-reinit-libs ()
@@ -144,12 +151,13 @@
 (require 'libgit) ;; for magit
 (require 'mmm-mode) ;; for vue-mode
 (require 'yasnippet) ;; for lsp-mode with snippets on
-;; (use-package lsp-mode
-;;   :commands lsp
-;;   :diminish lsp-mode
-;;   :hook
-;;   (elixir-mode . lsp)
-;;   :init)
+(use-package lsp-mode
+  :commands lsp
+  :diminish lsp-mode
+  :hook
+  (elixir-mode . lsp)
+  :init
+  (add-to-list 'exec-path "/Users/austin/stuff/elixir-ls/release"))
 
 ;; Stop asking me root, damnit
 (setq lsp-auto-guess-root t)
